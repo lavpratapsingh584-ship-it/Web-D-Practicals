@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .options label {
+            display: inline-flex;
+            align-items: center;
+            margin: 5px 15px 5px 0;
+            font-weight: normal;
+        }
+
+        .options input {
+            width: auto;
+            margin-right: 7px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .submit {
+            background: #4f46e5;
+        }
+
+        .reset {
+            background: #ef4444;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration Form</h1>
+    <p class="subtitle">Fill in your details to register</p>
+
+    <form onsubmit="alert('Registration submitted successfully!'); return false;">
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="Enter mobile number"
+               pattern="[0-9]{10}" maxlength="10" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Class / Section</label>
+        <select required>
+            <option value="">Select Section</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+        </select>
+
+        <label>Branch</label>
+        <select required>
+            <option value="">Select Branch</option>
+            <option>MCA</option>
+            <option>BCA</option>
+            <option>B.Tech</option>
+            <option>MBA</option>
+            <option>M.Tech</option>
+        </select>
+
+        <label>Subject</label>
+        <select required>
+            <option value="">Select Subject</option>
+            <option>Web Designing</option>
+            <option>Python Programming</option>
+            <option>C++ Programming</option>
+            <option>Operating System</option>
+            <option>Database Management</option>
+        </select>
+
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter your address"
+                  required></textarea>
+
+        <label>Gender</label>
+        <div class="options">
+            <label>
+                <input type="radio" name="gender" value="Male" required>
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Other">
+                Other
+            </label>
+        </div>
+
+        <label>Hobbies / Interests</label>
+        <div class="options">
+            <label>
+                <input type="checkbox" name="hobby" value="Reading">
+                Reading
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Sports">
+                Sports
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Music">
+                Music
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Coding">
+                Coding
+            </label>
+        </div>
+
+        <label>Upload Your Photo</label>
+        <input type="file" accept="image/*">
+
+        <div class="options">
+            <label>
+                <input type="checkbox" required>
+                I agree to the terms and conditions.
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="submit">
+                Register Now
+            </button>
+
+            <button type="reset" class="reset">
+                Reset Form
+            </button>
+        </div>
+
+    </form>
+
+    <div class="footer">
+        © 2026 Student Registration Form | Web Designing
+    </div>
+
+</div>
+
+</body>
+</html>
